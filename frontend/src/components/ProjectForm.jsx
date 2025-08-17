@@ -2,46 +2,46 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import axiosInstance from '../axiosConfig';
 
-const TaskForm = ({ tasks, setTasks, editingTask, setEditingTask }) => {
+const ProjectForm = ({ projects, setProjects, editingProject, setEditingProject }) => {
   const { user } = useAuth();
   const [formData, setFormData] = useState({ title: '', description: '', deadline: '' });
 
   useEffect(() => {
-    if (editingTask) {
+    if (editingProject) {
       setFormData({
-        title: editingTask.title,
-        description: editingTask.description,
-        deadline: editingTask.deadline,
+        title: editingProject.title,
+        description: editingProject.description,
+        deadline: editingProject.deadline,
       });
     } else {
       setFormData({ title: '', description: '', deadline: '' });
     }
-  }, [editingTask]);
+  }, [editingProject]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (editingTask) {
-        const response = await axiosInstance.put(`/api/tasks/${editingTask._id}`, formData, {
+      if (editingProject) {
+        const response = await axiosInstance.put(`/api/projects/${editingProject._id}`, formData, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
-        setTasks(tasks.map((task) => (task._id === response.data._id ? response.data : task)));
+        setProjects(projects.map((project) => (project._id === response.data._id ? response.data : project)));
       } else {
-        const response = await axiosInstance.post('/api/tasks', formData, {
+        const response = await axiosInstance.post('/api/projects', formData, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
-        setTasks([...tasks, response.data]);
+        setProjects([...projects, response.data]);
       }
-      setEditingTask(null);
+      setEditingProject(null);
       setFormData({ title: '', description: '', deadline: '' });
     } catch (error) {
-      alert('Failed to save task.');
+      alert('Failed to save project.');
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 shadow-md rounded mb-6">
-      <h1 className="text-2xl font-bold mb-4">{editingTask ? 'Edit Task' : 'Add Task'}</h1>
+      <h1 className="text-2xl font-bold mb-4">{editingProject ? 'Edit Project' : 'Add Project'}</h1>
       <input
         type="text"
         placeholder="Title"
@@ -63,10 +63,10 @@ const TaskForm = ({ tasks, setTasks, editingTask, setEditingTask }) => {
         className="w-full mb-4 p-2 border rounded"
       />
       <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
-        {editingTask ? 'Update Task' : 'Add Task'}
+        {editingProject ? 'Update Project' : 'Add Project'}
       </button>
     </form>
   );
 };
 
-export default TaskForm;
+export default ProjectForm;
