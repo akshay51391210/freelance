@@ -1,20 +1,33 @@
-<<<<<<< HEAD
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+# Freelancer Project Bidding Platform
 
-**This apps **contain** the following features:**
-
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
-
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+A full-stack MERN application where clients can post projects, freelancers can place bids, and both can manage tasks.  
+This app encourages transparency in freelancing through project posting, bidding, task tracking, and secure authentication.
 
 ---
+
+## 🚀 Features
+
+### 🔑 Authentication
+- User registration & login with JWT
+- Role-based access (Client / Freelancer)
+- Secure session handling
+
+### 📌 Projects
+- Create, edit, delete projects
+- Define project description, required skills, and budget range
+- View all projects with bidding options
+
+### 💰 Bids
+- Freelancers can submit bids for projects
+- Edit or delete bids
+- View all bids by the logged-in user
+
+### ✅ Tasks
+- Add, edit, delete tasks
+- Manage project tasks in a to-do style
+- Demonstrates CRUD structure with shared state (`TaskForm` + `TaskList`)
+
+
 
 **Prerequisite:** Please install the following software and create account in following web tools** **
 
