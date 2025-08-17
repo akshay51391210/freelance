@@ -1,30 +1,47 @@
-<<<<<<< HEAD
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+Freelancer Project Bidding Platform
+This project demonstrates how to design and implement a Freelancer Project Bidding Platform using the MERN stack. The design follows modular principles where input and display are separated into Form and List components.
+Consistency across modules (Tasks, Projects, Bids) makes the system easier to extend and maintain.
+The platform encourages transparency and accountability by integrating authentication, project management, bidding, and task tracking. Features
+Authentication
+- Secure signup & login with JWT  
+- Role-based access (Client / Freelancer)  
+- Protected routes for logged-in users  
 
-**This apps **contain** the following features:**
+Projects
+- Clients can **create, edit, delete** projects  
+- Add descriptions, skills, and budget ranges  
+- View all posted projects  
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
+Bids
+- Freelancers can **place, edit, delete** bids on projects  
+- View personal bidding history  
 
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
-
----
-
-**Prerequisite:** Please install the following software and create account in following web tools** **
-
-* **Nodejs [**[https://nodejs.org/en](https://nodejs.org/en)]** **
-* **Git [**[https://git-scm.com/](https://git-scm.com/)]** **
-* **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
-* **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
-* **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
+Tasks
+- Add, edit, delete personal tasks  
+- Manage project to-do items  
+- CRUD implementation with consistent UI  
 
 ---
-=======
-# taskmanager
->>>>>>> f3fe8f7 (Initial commit)
+
+## 🛠️ Tech Stack
+
+**Frontend**  
+- React    
+- Axios  
+
+**Backend**  
+- Node.js + Express.js  
+- MongoDB + Mongoose 
+- REST API 
+
+---
+Installation & Setup
+
+ Clone Repository
+git clone https://github.com/akshay51391210/freelance.git
+cd freelancer-platform
+Install Dependencies
+Npm install
+Run server locally
+Npm start
+
