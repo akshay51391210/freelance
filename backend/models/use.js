@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -7,13 +8,6 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     university: { type: String },
     address: { type: String },
-
-    // NEW FIELD
-    role: { 
-        type: String, 
-        enum: ['user', 'admin'], 
-        default: 'user'   // all new users start as "user"
-    }
 });
 
 userSchema.pre('save', async function (next) {
